@@ -1,0 +1,31 @@
+.trellolist {
+  font-size: 2rem;
+  line-height: 2.1rem;
+  width: 500px;
+  padding: 1em;
+  background: var(--color-text-gray);
+}
+.trellolist span:last-child {
+  color: var(--color-text-darkgray);
+  cursor: pointer;
+}
+
+.trello-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trello-heading i {
+  color: var(--color-text-darkgray);
+  cursor: pointer;
+}
+
+.trellolist-item {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #fafafa;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 31%);
+}

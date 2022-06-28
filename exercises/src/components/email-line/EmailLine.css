@@ -1,0 +1,35 @@
+.email-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid var(--color-text-gray);
+  border-bottom: 1px solid var(--color-text-gray);
+  padding: 0.5em 0;
+  cursor: pointer;
+}
+
+.email-content {
+  flex: 1;
+  margin-left: 1em;
+}
+
+.email-heading {
+  display: flex;
+}
+
+.email-heading > span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.email-sender {
+  flex: 1;
+}
+
+.email-subject {
+  flex: 2;
+}
+
+.email-message {
+  color: var(--color-text-gray);
+}

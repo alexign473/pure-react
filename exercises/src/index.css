@@ -1,0 +1,24 @@
+:root {
+  --poster-main-color: #1aa7ec;
+  --poster-bg-color: #000;
+  --color-text-gray: #ccc;
+  --color-text-darkgray: #808080;
+  --color-news-gray: #828282;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 99vw;
+  height: 100vh;
+}
+
+a,
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
