@@ -8,3 +8,6 @@ export * from './trello/TrelloList';
 export * from './hacker-news/HackerNews';
 export * from './pinterest/ImageCardList';
 export * from './music-genres/MusicGenres';
+export * from './usestate-hook/Room';
+export * from './usestate-hook/RandomList';
+export * from './usestate-hook/AudioControls';

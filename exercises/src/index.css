@@ -12,8 +12,12 @@
   padding: 0;
 }
 
+body {
+  padding: 0.5rem;
+}
+
 #root {
-  width: 99vw;
+  width: 95vw;
   height: 100vh;
 }
 

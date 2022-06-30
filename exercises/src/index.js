@@ -15,6 +15,10 @@ import {
   HackerNavBar,
   ImageCardList,
   MusicGenres,
+  Room,
+  RandomList,
+  AudioControls,
+  AudioControls2,
 } from './components';
 import {
   envelope,
@@ -43,7 +47,11 @@ root.render(
     <TrelloList list={trellolist} />
     <HackerNavBar />
     <HackerNews news={hackerNews} />
-    <ImageCardList cards={pins} /> */}
-    <MusicGenres genres={musicGenres} />
+    <ImageCardList cards={pins} />
+    <MusicGenres genres={musicGenres} /> */}
+    <Room />
+    <RandomList />
+    <AudioControls />
+    <AudioControls2 />
   </React.StrictMode>
 );
