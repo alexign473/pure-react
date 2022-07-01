@@ -11,3 +11,5 @@ export * from './music-genres/MusicGenres';
 export * from './usestate-hook/Room';
 export * from './usestate-hook/RandomList';
 export * from './usestate-hook/AudioControls';
+export * from './usestate-inputs/Inputs';
+export * from './usestate-inputs/OrderPizza';

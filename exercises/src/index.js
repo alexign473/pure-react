@@ -19,6 +19,9 @@ import {
   RandomList,
   AudioControls,
   AudioControls2,
+  Inputs,
+  Inputs2,
+  OrderPizza,
 } from './components';
 import {
   envelope,
@@ -48,10 +51,13 @@ root.render(
     <HackerNavBar />
     <HackerNews news={hackerNews} />
     <ImageCardList cards={pins} />
-    <MusicGenres genres={musicGenres} /> */}
+    <MusicGenres genres={musicGenres} />
     <Room />
     <RandomList />
     <AudioControls />
-    <AudioControls2 />
+    <AudioControls2 /> */}
+    {/* <Inputs />
+    <Inputs2 /> */}
+    <OrderPizza />
   </React.StrictMode>
 );
