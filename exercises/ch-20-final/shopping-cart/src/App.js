@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <div className='App'>
-      <Nav activeTab={activeTab} onTabChange={setActiveTab} />
+      <Nav activeTab={activeTab} onTabChange={setActiveTab} cart={cart} />
       <main className='App-content'>
         <Content
           tab={activeTab}
@@ -57,7 +57,7 @@ const App = () => {
   );
 };
 
-const Content = ({ tab, onAddToCart, onRemoveItem, cart }) => {
+const Content = ({ tab, onAddToCart, onRemoveItem, cart, total }) => {
   switch (tab) {
     default:
     case 'items':

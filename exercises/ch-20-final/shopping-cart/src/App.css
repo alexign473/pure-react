@@ -6,6 +6,8 @@
   margin: 20px;
   padding: 10px;
   border-bottom: 2px solid #508fca;
+  display: flex;
+  justify-content: space-between;
 }
 .App-nav ul {
   padding: 0;
@@ -32,4 +34,8 @@
 }
 .App-nav-item.selected {
   border-bottom-color: #ffaa3f;
+}
+.App-nav-total {
+  color: #555;
+  font-size: 1rem;
 }
