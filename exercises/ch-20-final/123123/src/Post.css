@@ -1,0 +1,32 @@
+.Post {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.Post-votes {
+  flex: 0.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: grey;
+}
+
+.Post-votes i {
+  cursor: pointer;
+}
+.Post-votes i:hover {
+  color: #04a31a;
+}
+.Post-score {
+  margin: 5px 0;
+}
+
+.Post-thumbnail {
+  flex: 0.2;
+}
+
+.Post-content {
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
