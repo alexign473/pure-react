@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 import { Reddit } from './Reddit';
 
 const App = () => {
@@ -6,7 +7,6 @@ const App = () => {
   // another to hold the current subreddit.
   const [input, setInput] = useState('reactjs');
   const [subreddit, setSubreddit] = useState(input);
-  const url = `https://www.reddit.com/r/${subreddit}.json`;
 
   // Update the subreddit when the user presses enter
   const handleSubmit = (e) => {
@@ -15,8 +15,8 @@ const App = () => {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div className='App'>
+      <form className='App-form' onSubmit={handleSubmit}>
         <input
           type='text'
           value={input}
@@ -24,7 +24,7 @@ const App = () => {
         />
       </form>
       <Reddit subreddit={subreddit} />
-    </>
+    </div>
   );
 };
 

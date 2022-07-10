@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './Reddit.css';
 import { Post } from './Post';
 
 export const Reddit = ({ subreddit }) => {
   const [posts, setPosts] = useState([]);
+  const url = `https://www.reddit.com/r/${subreddit}.json`;
 
   useEffect(() => {
     fetch('data.json', {

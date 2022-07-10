@@ -1,17 +1,25 @@
-import React from 'react';
-import './Post.css';
+import React, { useState } from 'react';
 import { Time } from './Time';
+import { Thumbnail } from './Thumbnail';
 
 export const Post = ({ post }) => {
+  const [score, setScore] = useState(post.score);
+  const handleUpvote = () => {
+    setScore((prevScore) => prevScore + 1);
+  };
+  const handleDownvote = () => {
+    setScore((prevScore) => prevScore - 1);
+  };
+
   return (
     <div className='Post'>
       <div className='Post-votes'>
-        <i className='fa fa-arrow-up' />
-        <span className='Post-score'>{post.score}</span>
-        <i className='fa fa-arrow-down' />
+        <i className='fa fa-arrow-up' onClick={handleUpvote} />
+        <span className='Post-score'>{score}</span>
+        <i className='fa fa-arrow-down' onClick={handleDownvote} />
       </div>
       <div className='Post-thumbnail'>
-        <img src={post.thumbnail} alt='thumbnail' />
+        <Thumbnail url={post.thumbnail} />
       </div>
       <div className='Post-content'>
         <h3>
@@ -24,8 +32,12 @@ export const Post = ({ post }) => {
           <span className='Post-author'>{post.author}</span>
         </span>
         <div>
-          <a href={post.url} className='Post-comments'>
-            {post.num_comments} comments
+          <a
+            href={`https://www.reddit.com${post.permalink}`}
+            className='Post-comments'
+          >
+            {post.num_comments}{' '}
+            {post.num_comments === 1 ? 'comment' : 'comments'}
           </a>
           <span className='subtext'> share save hide</span>
         </div>
