@@ -6,21 +6,10 @@ export const Reddit = ({ subreddit }) => {
   const url = `https://www.reddit.com/r/${subreddit}.json`;
 
   useEffect(() => {
-    fetch('data.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    })
+    fetch(url)
       .then((res) => res.json())
       .then((json) => setPosts(json.data.children.map((c) => c.data)));
-  }, [setPosts]);
-
-  // useEffect(() => {
-  //   fetch(url)
-  //     .then((res) => res.json())
-  //     .then((json) => setPosts(json.data.children.map((c) => c.data)));
-  // }, [subreddit, setPosts]);
+  }, [subreddit, setPosts]);
 
   return (
     <div className='Posts'>

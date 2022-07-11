@@ -17,6 +17,7 @@ const App = () => {
   return (
     <div className='App'>
       <form className='App-form' onSubmit={handleSubmit}>
+        r/{' '}
         <input
           type='text'
           value={input}
