@@ -57,7 +57,7 @@ const App = () => {
   );
 };
 
-const Content = ({ tab, onAddToCart, onRemoveItem, cart, total }) => {
+const Content = ({ tab, onAddToCart, onRemoveItem, cart }) => {
   switch (tab) {
     default:
     case 'items':
