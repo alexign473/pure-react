@@ -9,7 +9,7 @@ export const Message = ({ message }) => {
         <div>
           <span className='message-author'>{message.userName}</span>{' '}
           <span className='message-time'>
-            {dayjs(message.date).format('h:mm A ddd D-MMM-YYYY')}
+            {dayjs(message.timestamp).format('h:mm A ddd D-MMM-YYYY')}
           </span>
         </div>
         <div className='message-text'>{message.text}</div>
