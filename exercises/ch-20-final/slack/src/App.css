@@ -4,6 +4,12 @@
   background: #fafafa;
 }
 
+.main-layout {
+  flex: 2;
+  display: flex;
+  background: #fff;
+}
+
 .sidebar {
   flex: 1;
   background: #2d4588;
@@ -51,7 +57,7 @@
 }
 
 .chat {
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -62,7 +68,7 @@
   flex: 1;
   background: #fff;
   overflow-y: auto;
-  padding: 1rem 1rem 0 0.8rem;
+  padding: 0.8rem;
 }
 .message-list::-webkit-scrollbar-track {
   border-radius: 10px;
@@ -124,4 +130,12 @@
   border-radius: 3px;
   font-size: 1rem;
   padding: 0.5rem;
+}
+
+.chat-empty {
+  text-align: center;
+  font-size: 2rem;
+  color: #ccc;
+  position: relative;
+  top: 4rem;
 }

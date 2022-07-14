@@ -4,16 +4,16 @@ import { ChannelList } from './ChannelList';
 
 const ChannelName = ({ channel, isSelected, onClick }) => {
   return (
-    <li className={`sidebar-item ${isSelected ? 'selected' : ''}`}>
+    <div className={`sidebar-item ${isSelected ? 'selected' : ''}`}>
       <button onClick={onClick}># {channel.name}</button>
-    </li>
+    </div>
   );
 };
 const PersonName = ({ channel, isSelected, onClick }) => {
   return (
-    <li className={`sidebar-item ${isSelected ? 'selected' : ''}`}>
+    <div className={`sidebar-item ${isSelected ? 'selected' : ''}`}>
       <button onClick={onClick}>{channel.name}</button>
-    </li>
+    </div>
   );
 };
 
@@ -25,7 +25,6 @@ export const Sidebar = ({
 }) => {
   return (
     <div className='sidebar'>
-      active tab: {selectedChannelId}
       <ChannelList
         channels={channels}
         channelName={ChannelName}

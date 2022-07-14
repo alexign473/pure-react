@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { Message } from './Message';
 
-export const MessageList = ({ messages, scrollTo }) => {
+export const MessageList = ({ messages }) => {
+  const scrollTo = useRef();
+  useEffect(() => {
+    scrollTo.current.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
   return (
     <div className='message-list'>
       <ul>
-        {messages?.map((message, i) => (
-          <li key={i}>
+        {messages?.map((message) => (
+          <li key={message.id}>
             <Message message={message} />
           </li>
         ))}
