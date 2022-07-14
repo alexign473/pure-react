@@ -1,31 +1,47 @@
 import React from 'react';
 
-const CHANNELS = ['general', 'help', 'react', 'redux'];
-const PEOPLES = ['Dave', 'Sarah', 'Zack'];
+import { ChannelList } from './ChannelList';
 
-export const Sidebar = ({ activeTab, onTabChange }) => {
-  const itemClass = (tabName) =>
-    `sidebar-item ${tabName === activeTab ? 'selected' : ''}`;
+const ChannelName = ({ channel, isSelected, onClick }) => {
+  return (
+    <li className={`sidebar-item ${isSelected ? 'selected' : ''}`}>
+      <button onClick={onClick}># {channel.name}</button>
+    </li>
+  );
+};
+const PersonName = ({ channel, isSelected, onClick }) => {
+  return (
+    <li className={`sidebar-item ${isSelected ? 'selected' : ''}`}>
+      <button onClick={onClick}>{channel.name}</button>
+    </li>
+  );
+};
 
+export const Sidebar = ({
+  channels,
+  people,
+  selectedChannelId,
+  onChannelSelected,
+}) => {
   return (
     <div className='sidebar'>
-      active tab: {activeTab}
-      <h2>CHANNELS</h2>
-      <ul>
-        {CHANNELS.map((channel, i) => (
-          <li className={itemClass(channel)} key={i}>
-            <button onClick={() => onTabChange(channel)}># {channel}</button>
-          </li>
-        ))}
-      </ul>
-      <h2>PEOPLE</h2>
-      <ul>
-        {PEOPLES.map((people, i) => (
-          <li className={itemClass(people)} key={i}>
-            <button onClick={() => onTabChange(people)}>{people}</button>
-          </li>
-        ))}
-      </ul>
+      active tab: {selectedChannelId}
+      <ChannelList
+        channels={channels}
+        channelName={ChannelName}
+        selectedId={selectedChannelId}
+        onChannelSelected={onChannelSelected}
+      >
+        <h2>CHANNELS</h2>
+      </ChannelList>
+      <ChannelList
+        channels={people}
+        channelName={PersonName}
+        selectedId={selectedChannelId}
+        onChannelSelected={onChannelSelected}
+      >
+        <h2>PEOPLE</h2>
+      </ChannelList>
     </div>
   );
 };

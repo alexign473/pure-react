@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Message } from './Message';
 
-export const MessagesList = ({ messages, scrollTo }) => {
+export const MessageList = ({ messages, scrollTo }) => {
   return (
-    <div className='messages'>
+    <div className='message-list'>
       <ul>
         {messages?.map((message, i) => (
           <li key={i}>
